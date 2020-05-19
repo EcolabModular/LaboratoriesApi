@@ -11,6 +11,9 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
-});
+$router->get('/laboratories', 'LaboratoryController@index');
+$router->post('/laboratories', 'LaboratoryController@store');
+$router->get('/laboratories/{laboratory}', 'LaboratoryController@show');
+$router->put('/laboratories/{laboratory}', 'LaboratoryController@update');
+$router->patch('/laboratories/{laboratory}', 'LaboratoryController@update');
+$router->delete('/laboratories/{laboratory}', 'LaboratoryController@destroy');

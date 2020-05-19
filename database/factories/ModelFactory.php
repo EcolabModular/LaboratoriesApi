@@ -11,9 +11,10 @@
 |
 */
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(App\Laboratory::class, function (Faker\Generator $faker) {
     return [
-        'name' => $faker->name,
-        'email' => $faker->email,
+        'name' => $faker->sentence(1,true),
+        'description' => $faker->sentence(6,true),
+        'institution_id' => $faker->numberBetween(1,2),
     ];
 });
