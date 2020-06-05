@@ -29,7 +29,7 @@ class LaboratoryController extends Controller
     {
         $laboratories = Laboratory::all();
 
-        return $this->successResponse($laboratories);
+        return $this->showAll($laboratories);
     }
 
     /**

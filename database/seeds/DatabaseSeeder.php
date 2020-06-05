@@ -12,6 +12,30 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        factory(Laboratory::class, 20)->create();
+        $faker = Faker\Factory::create();
+
+        Laboratory::create([
+            'name' => 'Laboratorio de Mecanica Edificio O',
+            'description' => $faker->sentence(6,true),
+            'institution_id' => 1,
+        ]);
+
+        Laboratory::create([
+            'name' => 'Laboratorio de Mecanica Edificio V',
+            'description' => $faker->sentence(6,true),
+            'institution_id' => 1,
+        ]);
+
+        Laboratory::create([
+            'name' => 'Laboratorio de Mecanica Edificio M',
+            'description' => $faker->sentence(6,true),
+            'institution_id' => 1,
+        ]);
+
+        Laboratory::create([
+            'name' => 'Laboratorio de Mecanica Edificio N',
+            'description' => $faker->sentence(6,true),
+            'institution_id' => 1,
+        ]);
     }
 }
